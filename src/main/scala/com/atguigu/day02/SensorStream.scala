@@ -6,7 +6,7 @@ object SensorStream {
   def main(args: Array[String]): Unit = {
     val env = StreamExecutionEnvironment.getExecutionEnvironment
     env.setParallelism(1)
-    val stream = env.addSource(new SensorSource)
+    val stream = env.addSource(new SensorSourceII)
 
     stream.print()
     env.execute()
